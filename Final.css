@@ -1,0 +1,114 @@
+:root {
+    --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent-color: #ff7e5f;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-main: #2d3436;
+    --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f8;
+    background-image: radial-gradient(#d1d9e6 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container { max-width: 1000px; margin: 0 auto; }
+
+.header-section { text-align: center; margin-bottom: 40px; }
+
+h2 {
+    font-size: 2.5rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.status-bar {
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--soft-shadow);
+    margin-bottom: 20px;
+}
+
+.stat-item { display: flex; flex-direction: column; }
+.stat-item span { font-size: 0.85rem; color: #a0aec0; text-transform: uppercase; }
+.stat-item strong { font-size: 1.4rem; color: #4a5568; }
+
+.total-badge { color: #764ba2; }
+
+.budget-setter { display: flex; justify-content: center; gap: 10px; }
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--soft-shadow);
+    margin-bottom: 40px;
+}
+
+input, select {
+    padding: 12px 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    outline: none;
+}
+
+button {
+    background: var(--gradient-main);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { transform: translateY(-2px); opacity: 0.9; }
+
+.reset-btn { background: var(--accent-color); }
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--soft-shadow);
+    border-top: 5px solid #667eea;
+}
+
+ul { list-style: none; padding: 0; }
+
+li {
+    background: #f8fafc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-stamp { font-size: 0.75rem; color: #cbd5e0; }
+
+.chart-container {
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+}
